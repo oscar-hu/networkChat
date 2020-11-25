@@ -5,3 +5,7 @@ Real-time chatting with anyone else in the world over a Linode server!
 
 # How to Install
 - `git clone https://github.com/oscar-hu/networkChat.git`
+
+# How to Use
+- `cd networkChat`
+- `python3 client.py`
