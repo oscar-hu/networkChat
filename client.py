@@ -1,7 +1,7 @@
 import socket
 import threading
 
-serverIP = ""
+serverIP = "173.255.209.197"
 port = 5050
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect((serverIP, port))
@@ -11,7 +11,6 @@ def send_server(name):
     print("[TYPE MESSAGE BELOW]")
     while True:
         message = (name + ': ' + input())
-        print("\033[A                             \033[A") # removes text that was just written
         msgLen = bin(len(message))[2:]
         msgLen = "0" * (headerSize - len(msgLen)) + msgLen
         client.send(msgLen.encode())
